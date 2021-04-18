@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TercaLivreApp.Views.SobrePage"
+             xmlns:vm="clr-namespace:TercaLivreApp.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:SobreViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#004232</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Quem Somos" FontSize="Title"/>
+                <Label FontSize="16" Padding="0,0,0,0">
+                    <Label.Text>
+                        Em novembro de 2014 o Canal Terça Livre iniciou-se de maneira absolutamente despretensiosa.
+                    </Label.Text>
+                </Label>
+                <Label FontSize="16" Padding="0,0,0,0">
+                    <Label.Text>
+                        Essa despretensão revela-se inclusive no seu nome. Não imaginávamos que a proporção que o projeto alcançaria justificava uma abrangência diária. Éramos um programa semanal, apenas às terças-feiras, e isso nos bastava.
+                    </Label.Text>
+                </Label>
+                <Label FontSize="16" Padding="0,0,0,0">
+                    <Label.Text>
+                        Desde então, o Brasil tem passado por transformações que deram a esse último quadriênio a relevância de décadas.
+                    </Label.Text>
+                </Label>
+                <Label FontSize="16" Padding="0,0,0,0">
+                    <Label.Text>
+                        Da exposição a céu aberto do maior esquema de poder e corrupção já vistos em nossa história, orquestrado pelo Partido dos Trabalhadores em conluio com as esquerdas nacional e internacional à queda do governo de Dilma Rousseff, fruto direto das mobilizações populares. Do reconhecimento cada vez maior da relevância intelectual do professor Olavo de Carvalho e outros gigantes do passado brasileiro à consciência da impostura intelectual e moral representada pela grande mídia e pelos círculos acadêmicos brasileiros. O Terça Livre esteve presente nesses eventos sem jamais pretender causá-los ou dirigi-los mas dando sua contribuição para o esclarecimento dos fatos e dos fenômenos.
+                    </Label.Text>
+                </Label>
+                <Label FontSize="16" Padding="0,0,0,0">
+                    <Label.Text>
+                        Hoje, o Terça Livre é uma empresa de mídia com ampla programação diária em seu canal, um portal de notícias, revista digital, plataforma própria de cursos e livraria, que conta com uma equipe sob a liderança dos seus fundadores, Allan dos Santos e Italo Lorenzon, que trabalha incessantemente para levar ao nosso público informações, análises e conhecimento. Sempre atenta ao nosso valor de fundação: o amor pela Verdade e a fé de que somente Ela nos libertará.
+                    </Label.Text>
+                </Label>
+                <Label FontSize="16" Padding="0,0,0,0">
+                    <Label.Text>
+                        Este é o Terça Livre. Sejam todos muito bem-vindos.
+                    </Label.Text>
+                </Label>
+                <Label FontSize="16" Padding="0,24,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Visite nosso site "/>
+                                <Span Text="https://tercalivre.com.br" FontAttributes="Bold"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Margin="0,10,0,0" Text="Conheça Mais"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
