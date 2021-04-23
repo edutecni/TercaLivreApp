@@ -85,7 +85,7 @@
     
 
     <FlyoutItem Title="Youtube">
-        <ShellContent Route="SobrePage" ContentTemplate="{DataTemplate local:YoutubePage}" />
+        <ShellContent Route="YoutubePage" ContentTemplate="{DataTemplate local:YoutubePage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Sobre" Icon="icon_about.png">

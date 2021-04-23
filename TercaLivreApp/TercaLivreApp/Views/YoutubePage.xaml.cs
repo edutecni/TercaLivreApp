@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using TercaLivreApp.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace TercaLivreApp.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class YoutubePage : ContentPage
     {
+        YoutubeViewModel _viewModel;
+
         public YoutubePage()
         {
             InitializeComponent();
+
+            BindingContext = _viewModel = new YoutubeViewModel();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
         }
     }
 }
