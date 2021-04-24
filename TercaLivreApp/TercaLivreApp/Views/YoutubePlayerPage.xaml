@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TercaLivreApp.Views.YoutubePlayerPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:TercaLivreApp.ViewModels"  
+             xmlns:model="clr-namespace:TercaLivreApp.Models"  
+             x:Name="BrowseYoutubePlayerPage">    
+    <StackLayout>
+        <WebView Source="https://www.YoutubePlayer.com/channel/UC7qK1TCeLAr8qOeclO-s39g" 
+                 HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ></WebView>
+    </StackLayout>    
+</ContentPage>

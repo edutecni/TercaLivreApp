@@ -13,6 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\YoutubePlayerPage.xaml.cs">
+      <DependentUpon>YoutubePlayerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\YoutubePage.xaml.cs">
       <DependentUpon>YoutubePage.xaml</DependentUpon>
     </Compile>
